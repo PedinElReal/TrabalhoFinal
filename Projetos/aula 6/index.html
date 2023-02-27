@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Locadora 90's</title>
+	
+	<!-- arquivo CSS próprio-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+	<!-- Java Script -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<img width= "100px" src="img/filme3.png" >
+
+	<!-- Menu Navbar-->
+	<nav class="navbar navbar-expand-lg bg-light">
+		<div class="container-fluid">
+			
+			
+			<a class="navbar-brand" href="#topo">Locadora 90's</a>
+			<!-- Div com itens clicáveis -->
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" href="#tabFilmes">Filmes Disponíveis</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#drop" id="dropGeneros" role="button" data-bs-toggle="dropdown" > Filmes por Categoria </a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<li><a class="dropdown-item" href="#gAcao">Ação		</a></li>
+							<li><a class="dropdown-item" href="#gAnim">Animação	</a></li>
+							<li><a class="dropdown-item" href="#gRoman">Romance	</a></li>
+							<li><a class="dropdown-item" href="#gCom">Comédia	</a></li>
+							<li><a class="dropdown-item" href="#gDram">Drama	</a></li>
+
+						</ul>
+					</li>
+					<li class="nav-item">
+						
+								<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#drop" id="dropGeneros" role="button" data-bs-toggle="dropdown" > Cadastrar Filmes </a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			<div class="container mb-5">
+		<form>
+			<!-- Linha código e data lançamento -->
+			<div class="row">
+				<!-- Código -->
+				<div class="mb-3 col">
+					<label for="codFilme" class="form-label">Código: </label>
+					<input type="text" id="codFilme" class="form-control" placeholder="00">
+				</div>
+				<!-- Data lançamento-->
+				<div class="mb-3 col">
+					<label for="anoFilme" class="form-label">Ano: </label>
+					<input type="date" id="anoFilme" class="form-control">
+				</div>
+			</div>
+
+			<!-- Linha do Título e diretor -->
+			<div class="row">
+				<!-- Título -->
+				<div class="mb-3 col">
+					<label for="titFilme" class="form-label">Título: </label>
+					<input type="text" id="titFilme" class="form-control">
+				</div>
+
+				<!-- Diretor-->
+				<div class="mb-3 col">
+					<label for="dirFilme" class="form-label">Diretor: </label>
+					<input type="text" id="dirFilme" class="form-control">
+				</div>
+			</div>
+
+			<!-- Ator/Atriz Principal e Nota IMDb -->
+			<div class="row">
+				<!-- Ator/Atriz Principal -->
+				<div class="mb-3 col">
+					<label for="atPrinc" class="form-label">Ator/Atriz Principal: </label>
+					<input type="text" id="atPrinc" class="form-control">
+				</div>
+
+				<!-- Nota IMDb -->
+				<div class="mb-3 col">
+					<label for="nota" class="form-label">Nota IMDb: </label>
+					<input type="number" min="0" max="10" id="nota" class="form-control">
+				</div>
+			</div>
+
+			<!-- Linha dos gêneros -->
+			<div class="row">
+				<div class="mb-3 col form-check">
+					<input type="radio" name="radio" id="radGenAcao" class="form-check-input" value="acao">
+					<label for="radGenAcao" class="form-label">Ação</label>
+				</div>
+				
+				<div class="mb-3 col form-check">
+					<input type="radio" name="radio" id="radGenAnimacao" class="form-check-input" value="animacao">
+					<label for="radGenAnimacao" class="form-label">Animação</label>	
+				</div>
+			
+				<div class="mb-3 col form-check">
+					<input type="radio" name="radio" id="radGenRomance" class="form-check-input" value="romance">
+					<label for="radGenRomance" class="form-label">Romance</label>
+				</div>
+				
+				<div class="mb-3 col form-check">
+					<input type="radio" name="radio" id="radGenSuspense" class="form-check-input" value="suspense">
+					<label for="radGenSuspense" class="form-label">Drama</label>
+				</div>
+
+				<div class="mb-3 col form-check">
+					<input type="radio" name="radio" id="radGenComedia" class="form-check-input" value="comedia">
+					<label for="radGenComedia" class="form-label" id="#gCom">Comédia</label>
+				</div>
+			
+			<!-- Botão Enviar -->
+			<div class="col-auto">
+				<button type="submit" class="btn btn-primary mb-3">Cadastrar</button>
+			</div>
+		</form>
+	</div>
+		</form>
+	</div>
+
+
+						</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</nav>
+
+	<!-- Titulo Locadora -->
+	<h1 class="display-1 text-center mb-5">Locadora 90's</h1>
+
+	<!-- Tabela filmes disponíveis -->
+	<div class="container">
+		<table class="table table-striped table-hover">
+			<!-- Linha com títulos das colunas -->
+			<thead>
+				<tr>
+					<th scope="col">Número		</th>
+					<th scope="col">Título		</th>
+					<th scope="col">Diretor		</th>
+					<th scope="col">Lançamento	</th>
+					<th scope="col">Gênero		</th>
+					<th scope="col">Nota		</th>
+					<th scope="col">Ator/Atriz Principal/Personagem Principal</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Linha expandida com gênero do filme -->
+				<tr>
+					<th class="text-center table-primary" colspan="10" id="#gAcao">Ação</th>
+				</tr>
+				<!-- Primeiro filme -->
+			  	<tr>
+					<th scope="row">1</th>
+					<td>John Wick: Um Novo Dia Para Matar </td>
+					<td>Chad stahelski</td>
+					<td>16 de fevereiro de 2017</td>
+					<td>Ação</td>
+					<td>8/10</td>
+					<td>Keanu Reeves</td>
+				</tr>
+				<!-- Segundo filme -->
+				<tr>
+					<th scope="row">2</th>
+					<td>Terno de Dois Bilhões de Dolares</td>
+					<td>Kevin Donovan</td>
+					<td>27 de setembro de 2002</td>
+					<td>Ação</td>
+					<td>8/10</td>
+					<td>Jackie Chan</td>
+				</tr>
+				<!-- Terceiro filme -->
+				<tr>
+					<th scope="row">3</th>
+					<td>Rocky IV</td>
+					<td>Sylvester Stallone</td>
+					<td>17 de janeiro de 1986</td>
+					<td>Ação</td>
+					<td>7/10</td>
+					<td>Sylvester Stallone</td>
+				</tr>
+				<!-- Linha expandida com gênero do filme -->
+				<tr>
+					<th class="text-center table-primary" colspan="10" id="#gAnim">Animação</th>
+				</tr>
+				<!-- Quarto Filme filme -->
+			  	<tr>
+			  		<th scope="row">4</th>
+			    	<td>Dragon Ball Z: A Batalha Dos Deuses</td>
+			    	<td>Masahiro Hosoda</td>
+					<td>11 de outubro de 2013</td>
+					<td>Animação</td>
+					<td>11/10</td>
+					<td>Goku</td>
+				</tr>
+				<!-- Quinto filme -->
+				<tr>
+					<th scope="row">5</th>
+					<td>One Piece Red</td>
+					<td>Gorō Taniguchi</td>
+					<td>06 de agosto de 2022</td>
+					<td>Animação</td>
+					<td>10/10</td>
+					<td>Monkey D. Luffy</td>
+				</tr>
+				<!-- Sexto filme -->
+				<tr>
+					<th scope="row">6</th>
+					<td>A Voz do Silêncio: Koe no Katachi</td>
+					<td>Naoko Yamada</td>
+					<td>17 de setembro de 2016</td>
+					<td>Animação</td>
+					<td>9,0/10</td>
+					<td>Shoya Ishida</td>
+				</tr>
+				<th class="text-center table-primary" colspan="10" id="#gDram">Drama</th>
+				<tr>
+					<!-- Sétimo filme -->
+					<th scope="row">7</th>
+					<td>A Cabana</td>
+					<td>Stuart Hazeldine</td>
+					<td>06 de abril de 2017</td>
+					<td>Drama</td>
+					<td>10/10</td>
+					<td>Sam Worthington</td>
+				</tr>
+				<!-- Oitavo filme -->
+				<tr>
+					<th scope="row">8</th>
+					<td>Deus Não Está Morto</td>
+					<td>Michael Mason, Vance Null, Harold Cronk</td>
+					<td>21 de agosto de 2014</td>
+					<td>Drama</td>
+					<td>8/10</td>
+					<td>Kevin Sorbo</td>
+				</tr>
+				<!-- Nono filme -->
+				<tr>
+					<th scope="row">9</th>
+					<td>O Milagre Na Cela 7</td>
+					<td>Mehmet Ada Öztekin</td>
+					<td>08 de outubro de 2019</td>
+					<td>Drama</td>
+					<td>9,5/10</td>
+					<td>Aras Bulut Iynemli</td>
+				</tr>
+				<th class="text-center table-primary" colspan="10" id="#gCom">Comédia</th>
+				<!-- Décimo filme -->
+				<tr>
+					<th scope="row">10</th>
+					<td>Gente Grande</td>
+					<td>Dennis Dugan</td>
+					<td>24 de setembro de 2010</td>
+					<td>Comédia</td>
+					<td>10/10</td>
+					<td>Adam Sandler</td>
+				</tr>
+				<!-- Décimo Primeiro filme -->
+				<tr>
+					<th scope="row">11</th>
+					<td>O Paizão</td>
+					<td>Dennis Dugan</td>
+					<td> 8 de outubro de 1999 </td>
+					<td>Gênero</td>
+					<td>10/10</td>
+					<td>Adam Sandler</td>
+				</tr>
+				<!-- Décimo Segundo filme -->
+				<tr>
+					<th scope="row">12</th>
+					<td>Click</td>
+					<td>Frank Coraci</td>
+					<td>11 de agosto de 2006</td>
+					<td>Comédia</td>
+					<td>10/10</td>
+					<td>Adam Sandler</td>
+				</tr>
+				<th class="text-center table-primary" colspan="10" id="#gRoman">Romance</th>
+				<!-- Décimo Terceiro filme -->
+				<tr>
+
+					<th scope="row">13</th>
+					<td>Mamma Mia!</td>
+					<td>Phyllida Lloyd</td>
+					<td>12 de setembro de 2008</td>
+					<td>Romance</td>
+					<td>10/10</td>
+					<td>Amanda Seyfried</td>
+				</tr>
+				<!-- Décimo Quarto filme -->
+				<tr>
+					<th scope="row">14</th>
+					<td>Como Eu Era Antes De Você</td>
+					<td>Thea Sharrock</td>
+					<td>16 de junho de 2016</td>
+					<td>Romance</td>
+					<td>10/10</td>
+					<td>Emilia Clarke</td>
+				</tr>
+				<!-- Décimo Quinto filme -->
+				<tr>
+					<th scope="row">15</th>
+					<td>Nos Tempos da Brilhantina</td>
+					<td>Randal Kleiser</td>
+					<td>13 de junho de 1978</td>
+					<td>Romance</td>
+					<td>9,0/10</td>
+					<td>Olivia Newton-John</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Final da tabela -->
+	</div>
+
+	
+
+</body>
+</html>
+ 

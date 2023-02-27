@@ -1,0 +1,101 @@
+
+
+<style type="text/css">
+	/*th*/
+	body{
+		text-align: center;
+	}
+	div{
+		text-align: center;
+	}
+	td,th{
+		border-width:100% ;
+		padding-left: 50px;
+		padding: 20px;
+	}
+		table{
+			width: 50%;
+		}
+		h2,h1,h3{
+			background-color: white;
+		}
+		#l1,#l2,#l3,#l4,#l5{
+			color: black;
+			background-color: gray;
+		}
+	section{
+		padding-left: 250px;
+		padding-right: 250px;
+		padding-left: 250px;
+		padding-right: 1250px;
+		padding: 10px;
+		border: 1120px;
+		border-color: gray;
+	}
+	#topo{
+		background-color: white;
+	}
+	p{
+		text-align: center;
+	}
+	
+	th{
+	 	color: white;
+	}
+	body{
+		/*background*/
+		background-color: gray;
+	}
+		.título{
+		background-color: white ;
+	}
+
+	a:link{
+		color: white;
+	}
+
+	a:visited{
+		color: red;
+	}
+	a:hover{
+		color: white;
+	}
+	a:active{
+		color: black;
+	}
+
+	td{
+		background-color: white;
+	}
+
+	tr{
+		background-color: black;	
+	}
+
+	.h3{
+		color: powderblue;
+	}
+
+		#branco{
+		color: white;
+	}
+
+	p{
+		color: black;
+
+	}
+
+	.titule{
+		color: blue;
+	}
+
+	#jjk2{
+		color: black;
+		font-family: noto sans-serif;
+	}
+	ol{
+		list-style-position: inside;
+	}
+	div
+
+</style>

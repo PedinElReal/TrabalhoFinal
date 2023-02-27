@@ -1,0 +1,104 @@
+/* hero bg imagem */
+.bgimagem {
+    height:100vh;
+    background: url('HERO.jpg');
+    background-size:cover;
+    position:relative;
+}
+/* texto hero image*/
+.hero_titulo{
+    font-size: 4.5rem;
+}
+.hero_sub {
+    font-size: 2rem;
+}
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* Imagem da seção Sobre */
+.imagemSobre {
+    width: 100%;
+    border-radius: 30px;
+}
+
+/* Seção serviços */
+.servicesText.card {
+    height: 280px;
+    cursor: pointer;
+  }
+.servicesIcon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
+.card-title {
+    text-align: center;
+}
+.card:hover .servicesIcon {
+    color: #008000;
+}
+.servicesText:hover {
+    border: 1px solid #008000;
+}
+
+.navbar {
+    background-color:#0f0f0f;
+}
+.navbar a {
+    color: white;
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.contactIcon{
+    font-size: 56px;
+    color:#006342;
+}
+
+.card-alt {
+    height: 15em;
+}
+
+#sobre, #servicos, #portfolio, #contato {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.glass {
+    height: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+}
+
+.icone { 
+    width: 700px; 
+    margin-left: 200px;
+    margin-right: 200px; 
+}
+
+.cinza{
+    background-color: #828282;
+}
+
+.cinza2{
+    background-color: #9c9c9c;
+}
+
+.cinza3{
+    background-color: #363636;
+}
